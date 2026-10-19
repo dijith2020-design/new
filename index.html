@@ -22,6 +22,11 @@ header{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.97);border-
 @media(max-width:760px){.wrap{width:calc(100% - 28px)}.nav{min-height:62px}.brand{min-width:120px}.brand-mark{font-size:27px}.brand-sub{font-size:6px;letter-spacing:1.5px}.hamb{display:block}.navlinks{display:none;position:absolute;left:0;right:0;top:62px;background:var(--paper);padding:16px 22px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.navright .btn{padding:9px 11px;font-size:11px}.hero,.hero-inner{min-height:490px}.hero::before{background-position:64% center}.hero::after{background:linear-gradient(90deg,rgba(249,245,233,.98),rgba(249,245,233,.89) 54%,rgba(249,245,233,.32))}.hero-inner{padding:36px 0;align-items:flex-start}.hero-copy{max-width:100%;padding-top:10px}.hero h1{font-size:clamp(40px,11vw,57px)}.hero-lead{max-width:340px}.stats{gap:12px 18px}.stat{min-width:calc(50% - 10px)}.service-grid{grid-template-columns:repeat(2,1fr);gap:10px}.service-card img{height:125px}.service-body{padding:11px}.service-body p{min-height:0}.trust-grid{grid-template-columns:repeat(2,1fr);row-gap:12px}.trust-item:nth-child(2){border-right:0}.band h2{letter-spacing:1.5px}.industrial-grid{grid-template-columns:1fr}.industrial-card>img{height:160px}.project-grid{grid-template-columns:repeat(2,1fr)}.about-grid,.contact-grid{grid-template-columns:1fr;gap:22px}.about-photo{height:230px}.gallery-head{align-items:flex-start;flex-direction:column}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-feature{grid-column:1/-1;min-height:270px}.gallery-feature img{min-height:270px}.gallery-small{grid-column:1/-1;grid-template-columns:1fr 1fr;grid-template-rows:auto}.gallery-small img{height:115px}}
 @media(max-width:430px){.navright .btn span{display:none}.hero{min-height:520px}.hero-inner{min-height:520px}.service-grid{grid-template-columns:1fr}.service-card img{height:180px}.service-body p{min-height:0}.panel{padding:13px}.panelhead h2{font-size:21px}.project-grid{gap:8px}.project-card{padding:10px 5px}.project-logo{font-size:15px}.gallery-small img{height:95px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+/* Approved Style 4 hero: use the provided banner image exactly as supplied. */
+.hero-banner { width: 100%; margin: 0; padding: 0; overflow: hidden; background: #073b2a; }
+.hero-banner img { display: block; width: 100%; height: auto; object-fit: contain; }
+
 </style>
 </head>
 <body>
@@ -32,11 +37,9 @@ header{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.97);border-
 <div class="navright"><a class="btn btn-green" href="#contact">◉ <span>Get a Quote</span></a><a class="callus" href="#contact">☎ &nbsp;Call Us<br><strong>(Your Number)</strong></a></div>
 </div></header>
 <main>
-<section class="hero" id="home"><div class="wrap hero-inner"><div class="hero-copy">
-<div class="eyebrow">Nourishing People Everyday</div><h1>Krishna<br>Catering Services</h1><p class="hero-lead">Pure Vegetarian Meals.<br>Quality. Hygiene. Trusted for Over 40 Years.</p>
-<div class="stats"><div class="stat"><span class="staticon">♛</span><span><strong>40+ Years</strong><small>of Experience</small></span></div><div class="stat"><span class="staticon">♟</span><span><strong>1000+</strong><small>Plates Served Daily</small></span></div><div class="stat"><span class="staticon">✓</span><span><strong>FSSAI</strong><small>Compliant*</small></span></div><div class="stat"><span class="staticon">❧</span><span><strong>Vegetarian</strong><small>Meals Only</small></span></div></div>
-<div class="hero-buttons"><a class="btn btn-gold" href="#contact">Get a Quote&nbsp; →</a><a class="btn btn-green" href="#contact">◉ &nbsp;Enquire Now</a></div>
-</div></div></section>
+<section class="hero-banner" id="home" aria-label="Krishna Catering Services — approved Style 4 banner">
+  <img src="images/00-hero-banner-style-4.png" alt="Krishna Catering Services forest-green and gold banner with the KCS logo and South Indian vegetarian thali">
+</section>
 
 <section class="services" id="services"><div class="wrap service-grid">
 <article class="service-card"><img src="images/02-industrial-canteen-dining-room.jpg" alt="Original industrial canteen dining room"><div class="service-body"><div class="service-icon">▦</div><h3>Industrial Canteens</h3><p>Nutritious vegetarian meals for factories and industrial workforces.</p><a class="learn" href="#industrial">Learn More <span>→</span></a></div></article>
