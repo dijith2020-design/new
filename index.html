@@ -38,7 +38,7 @@ header{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.97);border-
 .service-carousel{overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:3px 1px 16px}
 .service-carousel::-webkit-scrollbar{display:none}
 .service-track{display:flex;gap:20px}
-.service-card{flex:0 0 min(82%,820px);scroll-snap-align:start;overflow:hidden;border:1px solid rgba(12,54,40,.1);border-radius:18px;background:#fffdf8;box-shadow:0 12px 32px rgba(26,47,35,.09)}
+.service-card{flex:0 0 calc((100% - 60px)/4);scroll-snap-align:start;overflow:hidden;border:1px solid rgba(12,54,40,.1);border-radius:18px;background:#fffdf8;box-shadow:0 12px 32px rgba(26,47,35,.09)}
 .service-card>img{width:100%;height:300px;object-fit:cover;display:block}
 .service-body{padding:24px 26px 27px}
 .service-body h3{font-size:26px;margin:7px 0 8px}
@@ -55,6 +55,7 @@ header{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.97);border-
 .training-caption>span{font-family:var(--serif);font-size:24px;color:#b48b3b;line-height:1.1}
 .training-caption h3{margin:0 0 5px;font-size:20px;color:var(--ink)}
 .training-caption p{margin:0;color:var(--muted);line-height:1.55}
+@media(max-width:1000px){.service-card{flex-basis:calc((100% - 20px)/2);}}
 @media(max-width:700px){
  .service-carousel-heading{align-items:center}
  .service-card{flex-basis:88%;max-width:88%}
@@ -91,7 +92,7 @@ header{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.97);border-
         <article class="service-card"><img src="images/02-industrial-canteen-dining-room.jpg" alt="Original industrial canteen dining room"><div class="service-body"><div class="service-icon">▦</div><h3>Industrial Canteens</h3><p>Nutritious vegetarian meals for factories and industrial workforces.</p><a class="learn" href="#industrial">Learn More <span>→</span></a></div></article>
         <article class="service-card"><img src="images/03-guest-house-canteen.jpg" alt="Original guest-house canteen photograph"><div class="service-body"><div class="service-icon">⌂</div><h3>Guest House Catering</h3><p>Homestyle vegetarian meals for guests, visitors and teams.</p><a class="learn" href="#about">Learn More <span>→</span></a></div></article>
         <article class="service-card"><img src="images/05-project-canteen.jpeg" alt="Krishna Catering Services project canteen, original photograph supplied by the business"><div class="service-body"><div class="service-icon">♧</div><h3>Project Canteens</h3><p>Vegetarian meal services for project sites and construction teams.</p><a class="learn" href="#projects">Learn More <span>→</span></a></div></article>
-        <article class="service-card"><img src="images/05-hygiene-food-preparation.jpg" alt="Original food preparation photograph"><div class="service-body"><div class="service-icon">✓</div><h3>Hygiene &amp; Food Safety</h3><p>Hygiene-focused food handling, preparation and staff practices.</p><a class="learn" href="#gallery">Learn More <span>→</span></a></div></article>
+        <article class="service-card"><img src="images/12-hygiene-food-safety-original.jpeg" alt="Original food preparation photograph"><div class="service-body"><div class="service-icon">✓</div><h3>Hygiene &amp; Food Safety</h3><p>Hygiene-focused food handling, preparation and staff practices.</p><a class="learn" href="#gallery">Learn More <span>→</span></a></div></article>
       </div>
     </div>
     <div class="carousel-progress" aria-hidden="true"><span id="serviceProgress"></span></div>
@@ -120,13 +121,31 @@ header{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.97);border-
 
 <section class="gallery" id="gallery">
   <div class="wrap">
-    <div class="gallery-head"><div><div class="eyebrow">Our Work in Practice</div><h2>Best Captured Moments</h2><p>Original photographs from our canteens, training activities and quality checks.</p></div><a class="btn btn-outline" href="#contact">Enquire About Our Services →</a></div>
-    <article class="gallery-feature"><img src="images/06-team-best-captured-moment.jpg" alt="Krishna Catering Services team photograph — best captured moment"><div class="gallery-label"><strong>Best Captured Moment</strong><span>Our team, our commitment to service.</span></div></article>
+    <div class="gallery-head">
+      <div>
+        <div class="eyebrow">Our Standards in Practice</div>
+        <h2>Training &amp; Audits</h2>
+        <p>Regular training and checks to support safe, hygienic and reliable food service.</p>
+      </div>
+      <a class="btn btn-outline" href="#contact">Enquire About Our Services →</a>
+    </div>
     <div class="training-grid">
-      <article class="training-card"><img src="images/01-training-fire-safety.jpeg" alt="Original photograph of fire and safety training in the canteen"><div class="training-caption"><span>01</span><div><h3>Fire &amp; Safety Training</h3><p>Safety awareness and emergency preparedness.</p></div></div></article>
-      <article class="training-card"><img src="images/02-training-medical.jpeg" alt="Original photograph of medical training and health checks"><div class="training-caption"><span>02</span><div><h3>Medical Training</h3><p>Health awareness and safe work practices.</p></div></div></article>
-      <article class="training-card"><img src="images/03-training-electrical-appliances.jpeg" alt="Original photograph of staff training in the canteen"><div class="training-caption"><span>03</span><div><h3>Electrical Appliance Training</h3><p>Training focused on safe equipment use.</p></div></div></article>
-      <article class="training-card"><img src="images/04-random-canteen-audits.jpeg" alt="Original photograph of a canteen review and audit meeting"><div class="training-caption"><span>04</span><div><h3>Random Audits</h3><p>Routine reviews to support quality and standards.</p></div></div></article>
+      <article class="training-card">
+        <img src="images/01-training-fire-safety.jpeg" alt="Original photograph of fire and safety training in the canteen" loading="lazy">
+        <div class="training-caption"><span>01</span><div><h3>Fire &amp; Safety Training</h3><p>Safety awareness and emergency preparedness.</p></div></div>
+      </article>
+      <article class="training-card">
+        <img src="images/02-training-medical.jpeg" alt="Original photograph of medical training and health checks" loading="lazy">
+        <div class="training-caption"><span>02</span><div><h3>Medical Training</h3><p>Health awareness and safe work practices.</p></div></div>
+      </article>
+      <article class="training-card">
+        <img src="images/03-training-electrical-appliances.jpeg" alt="Original photograph of staff training in the canteen" loading="lazy">
+        <div class="training-caption"><span>03</span><div><h3>Electrical Appliance Training</h3><p>Training focused on safe equipment use.</p></div></div>
+      </article>
+      <article class="training-card">
+        <img src="images/04-random-canteen-audits.jpeg" alt="Original photograph of a canteen review and audit meeting" loading="lazy">
+        <div class="training-caption"><span>04</span><div><h3>Random Audits</h3><p>Routine reviews to support quality and standards.</p></div></div>
+      </article>
     </div>
   </div>
 </section>
@@ -161,7 +180,7 @@ document.getElementById("enquiryForm").addEventListener("submit",e=>{e.preventDe
   };
   document.getElementById('servicesPrev')?.addEventListener('click', () => { go(index - 1); restart(); });
   document.getElementById('servicesNext')?.addEventListener('click', () => { go(index + 1); restart(); });
-  const restart = () => { clearInterval(timer); timer = setInterval(() => go(index + 1), 6000); };
+  const restart = () => { clearInterval(timer); timer = setInterval(() => go(index + 1), 2600); };
   carousel.addEventListener('scroll', () => {
     const next = Math.round(carousel.scrollLeft / step());
     if (next >= 0 && next < cards.length && next !== index) {
