@@ -27,6 +27,45 @@ header{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.97);border-
 .hero-banner { width: 100%; margin: 0; padding: 0; overflow: hidden; background: #073b2a; }
 .hero-banner img { display: block; width: 100%; height: auto; object-fit: contain; }
 
+
+/* Larger, one-at-a-time service carousel */
+.service-carousel-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:22px}
+.service-carousel-heading h2{font-family:var(--serif);font-size:clamp(30px,3vw,42px);margin:4px 0 8px;color:var(--ink)}
+.service-carousel-heading p{margin:0;color:var(--muted)}
+.carousel-controls{display:flex;gap:10px;flex-shrink:0}
+.carousel-arrow{width:48px;height:48px;border-radius:50%;border:1px solid #c9b987;background:#fffdf8;color:#0a3d2d;font-size:25px;cursor:pointer;transition:background .2s,color .2s,transform .2s}
+.carousel-arrow:hover{background:#0a3d2d;color:#fff;transform:translateY(-2px)}
+.service-carousel{overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:3px 1px 16px}
+.service-carousel::-webkit-scrollbar{display:none}
+.service-track{display:flex;gap:20px}
+.service-card{flex:0 0 min(82%,820px);scroll-snap-align:start;overflow:hidden;border:1px solid rgba(12,54,40,.1);border-radius:18px;background:#fffdf8;box-shadow:0 12px 32px rgba(26,47,35,.09)}
+.service-card>img{width:100%;height:300px;object-fit:cover;display:block}
+.service-body{padding:24px 26px 27px}
+.service-body h3{font-size:26px;margin:7px 0 8px}
+.service-body p{font-size:16px;line-height:1.65;max-width:480px}
+.service-icon{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:#f6e8c5;color:#0b3c2b;font-size:24px}
+.carousel-progress{height:3px;background:#e9e3d4;border-radius:8px;overflow:hidden;margin:2px 0 0}
+.carousel-progress span{height:100%;display:block;width:25%;background:#b48b3b;transition:transform .35s ease}
+.gallery-feature{margin-bottom:24px}
+.gallery-feature img{display:block;width:100%;max-height:480px;object-fit:cover;border-radius:18px}
+.training-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.training-card{background:#fffdf8;border:1px solid rgba(12,54,40,.1);border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(26,47,35,.06)}
+.training-card>img{width:100%;height:300px;display:block;object-fit:cover}
+.training-caption{display:flex;gap:14px;padding:18px 20px 20px;align-items:flex-start}
+.training-caption>span{font-family:var(--serif);font-size:24px;color:#b48b3b;line-height:1.1}
+.training-caption h3{margin:0 0 5px;font-size:20px;color:var(--ink)}
+.training-caption p{margin:0;color:var(--muted);line-height:1.55}
+@media(max-width:700px){
+ .service-carousel-heading{align-items:center}
+ .service-card{flex-basis:88%;max-width:88%}
+ .service-card>img{height:230px}
+ .service-body{padding:20px}
+ .service-body h3{font-size:23px}
+ .training-grid{grid-template-columns:1fr}
+ .training-card>img{height:240px}
+ .carousel-arrow{width:42px;height:42px}
+}
+
 </style>
 </head>
 <body>
@@ -41,12 +80,23 @@ header{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.97);border-
   <img src="images/00-hero-banner-style-4.png" alt="Krishna Catering Services forest-green and gold banner with the KCS logo and South Indian vegetarian thali">
 </section>
 
-<section class="services" id="services"><div class="wrap service-grid">
-<article class="service-card"><img src="images/02-industrial-canteen-dining-room.jpg" alt="Original industrial canteen dining room"><div class="service-body"><div class="service-icon">▦</div><h3>Industrial Canteens</h3><p>Nutritious vegetarian meals for factories and industrial workforces.</p><a class="learn" href="#industrial">Learn More <span>→</span></a></div></article>
-<article class="service-card"><img src="images/03-guest-house-canteen.jpg" alt="Original guest-house canteen exterior"><div class="service-body"><div class="service-icon">⌂</div><h3>Guest House Catering</h3><p>Homestyle vegetarian meals for guests, visitors and teams.</p><a class="learn" href="#about">Learn More <span>→</span></a></div></article>
-<article class="service-card"><img src="images/04-project-canteen-building.jpg" alt="Project canteen building supplied by the business"><div class="service-body"><div class="service-icon">♧</div><h3>Project Canteens</h3><p>Vegetarian meal services for project sites and construction teams.</p><a class="learn" href="#projects">Learn More <span>→</span></a></div></article>
-<article class="service-card"><img src="images/05-hygiene-food-preparation.jpg" alt="Original food preparation photograph"><div class="service-body"><div class="service-icon">✓</div><h3>Hygiene & Food Safety</h3><p>Hygiene-focused food handling, preparation and staff practices.</p><a class="learn" href="#gallery">Learn More <span>→</span></a></div></article>
-</div></section>
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="service-carousel-heading">
+      <div><div class="eyebrow">What We Do</div><h2>Our Catering Services</h2><p>Move through our services one by one.</p></div>
+      <div class="carousel-controls"><button class="carousel-arrow" type="button" id="servicesPrev" aria-label="Previous service">←</button><button class="carousel-arrow" type="button" id="servicesNext" aria-label="Next service">→</button></div>
+    </div>
+    <div class="service-carousel" id="serviceCarousel" aria-label="Catering services carousel">
+      <div class="service-track">
+        <article class="service-card"><img src="images/02-industrial-canteen-dining-room.jpg" alt="Original industrial canteen dining room"><div class="service-body"><div class="service-icon">▦</div><h3>Industrial Canteens</h3><p>Nutritious vegetarian meals for factories and industrial workforces.</p><a class="learn" href="#industrial">Learn More <span>→</span></a></div></article>
+        <article class="service-card"><img src="images/03-guest-house-canteen.jpg" alt="Original guest-house canteen photograph"><div class="service-body"><div class="service-icon">⌂</div><h3>Guest House Catering</h3><p>Homestyle vegetarian meals for guests, visitors and teams.</p><a class="learn" href="#about">Learn More <span>→</span></a></div></article>
+        <article class="service-card"><img src="images/05-project-canteen.jpeg" alt="Krishna Catering Services project canteen, original photograph supplied by the business"><div class="service-body"><div class="service-icon">♧</div><h3>Project Canteens</h3><p>Vegetarian meal services for project sites and construction teams.</p><a class="learn" href="#projects">Learn More <span>→</span></a></div></article>
+        <article class="service-card"><img src="images/05-hygiene-food-preparation.jpg" alt="Original food preparation photograph"><div class="service-body"><div class="service-icon">✓</div><h3>Hygiene &amp; Food Safety</h3><p>Hygiene-focused food handling, preparation and staff practices.</p><a class="learn" href="#gallery">Learn More <span>→</span></a></div></article>
+      </div>
+    </div>
+    <div class="carousel-progress" aria-hidden="true"><span id="serviceProgress"></span></div>
+  </div>
+</section>
 
 <section class="trust-strip"><div class="wrap trust-grid"><div class="trust-item"><span class="trust-icon">♛</span><span><strong>40+ Years</strong><small>of Experience</small></span></div><div class="trust-item"><span class="trust-icon">♟</span><span><strong>1000+</strong><small>Plates Served Daily</small></span></div><div class="trust-item"><span class="trust-icon">❧</span><span><strong>Vegetarian</strong><small>Meals Only</small></span></div><div class="trust-item"><span class="trust-icon">✓</span><span><strong>FSSAI</strong><small>Compliant*</small></span></div></div></section>
 
@@ -68,9 +118,18 @@ header{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.97);border-
 
 <section class="about" id="about"><div class="wrap about-grid"><div><div class="eyebrow">About Krishna Catering Services</div><h2>Vegetarian meals. Dependable service. Every day.</h2><p>Krishna Catering Services provides vegetarian catering for industrial canteens, project canteens and guest houses. Our focus is on reliable meal service, food hygiene and supporting the people who keep workplaces running.</p><div class="feature-grid"><div class="feature">✓ &nbsp;40+ Years of Experience</div><div class="feature">✓ &nbsp;1000+ Meals Served Daily</div><div class="feature">✓ &nbsp;Vegetarian Catering</div><div class="feature">✓ &nbsp;Industrial & Project Sites</div></div><p style="font-size:11px;margin-top:12px">*Please confirm current FSSAI licence details and wording before publishing.</p></div><img class="about-photo" src="images/07-canteen-dining-room-training.jpg" alt="Original canteen dining-room photograph" loading="lazy"></div></section>
 
-<section class="gallery" id="gallery"><div class="wrap"><div class="gallery-head"><div><h2>Best Captured Moments</h2><p>A glimpse of our canteens, team and the people behind our service.</p></div><a class="btn btn-outline" href="#contact">Enquire About Our Services →</a></div>
-<div class="gallery-grid"><article class="gallery-feature"><img src="images/06-team-best-captured-moment.jpg" alt="Krishna Catering Services team photograph — best captured moment"><div class="gallery-label"><strong>Best Captured Moment</strong><span>Our team, our commitment to service.</span></div></article><div class="gallery-small"><img src="images/02-industrial-canteen-dining-room.jpg" alt="Industrial canteen dining hall" loading="lazy"><img src="images/05-hygiene-food-preparation.jpg" alt="Food preparation and hygiene" loading="lazy"></div><div class="gallery-small"><img src="images/03-guest-house-canteen.jpg" alt="Guest-house canteen exterior" loading="lazy"><img src="images/04-project-canteen-building.jpg" alt="Project canteen building" loading="lazy"></div></div>
-</div></section>
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="gallery-head"><div><div class="eyebrow">Our Work in Practice</div><h2>Best Captured Moments</h2><p>Original photographs from our canteens, training activities and quality checks.</p></div><a class="btn btn-outline" href="#contact">Enquire About Our Services →</a></div>
+    <article class="gallery-feature"><img src="images/06-team-best-captured-moment.jpg" alt="Krishna Catering Services team photograph — best captured moment"><div class="gallery-label"><strong>Best Captured Moment</strong><span>Our team, our commitment to service.</span></div></article>
+    <div class="training-grid">
+      <article class="training-card"><img src="images/01-training-fire-safety.jpeg" alt="Original photograph of fire and safety training in the canteen"><div class="training-caption"><span>01</span><div><h3>Fire &amp; Safety Training</h3><p>Safety awareness and emergency preparedness.</p></div></div></article>
+      <article class="training-card"><img src="images/02-training-medical.jpeg" alt="Original photograph of medical training and health checks"><div class="training-caption"><span>02</span><div><h3>Medical Training</h3><p>Health awareness and safe work practices.</p></div></div></article>
+      <article class="training-card"><img src="images/03-training-electrical-appliances.jpeg" alt="Original photograph of staff training in the canteen"><div class="training-caption"><span>03</span><div><h3>Electrical Appliance Training</h3><p>Training focused on safe equipment use.</p></div></div></article>
+      <article class="training-card"><img src="images/04-random-canteen-audits.jpeg" alt="Original photograph of a canteen review and audit meeting"><div class="training-caption"><span>04</span><div><h3>Random Audits</h3><p>Routine reviews to support quality and standards.</p></div></div></article>
+    </div>
+  </div>
+</section>
 
 <section class="contact" id="contact"><div class="wrap contact-grid"><div><div class="eyebrow">Get in Touch</div><h2>Let's discuss your vegetarian catering requirements.</h2><p>Contact Krishna Catering Services for industrial canteens, project canteens and guest-house catering.</p><div class="contact-details"><span>☎ Call Us: (Your Number)</span><span>◉ WhatsApp: (Your Number)</span><span>✉ Email: (Your Email)</span></div></div>
 <form class="contact-form" id="enquiryForm"><input id="visitorName" placeholder="Your name" autocomplete="name" required><input id="visitorPhone" placeholder="Phone number" autocomplete="tel" required><select id="visitorService" required><option value="">Select a service</option><option>Industrial Canteen</option><option>Project Canteen</option><option>Guest House Catering</option></select><textarea id="visitorMessage" placeholder="Tell us about your requirement"></textarea><button class="btn btn-gold" type="submit">Prepare Email Enquiry →</button><p class="note">The form opens the visitor's email app. Replace the placeholder email in the script before publishing.</p></form></div></section>
@@ -84,5 +143,40 @@ nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classLi
 document.getElementById("year").textContent=new Date().getFullYear();
 document.getElementById("enquiryForm").addEventListener("submit",e=>{e.preventDefault();if(KCS_EMAIL==="YOUR-EMAIL@example.com"){alert("Please replace YOUR-EMAIL@example.com in the KCS_EMAIL setting near the bottom of index.html with your real business email.");return;}const name=document.getElementById("visitorName").value.trim(),phone=document.getElementById("visitorPhone").value.trim(),service=document.getElementById("visitorService").value,message=document.getElementById("visitorMessage").value.trim();window.location.href="mailto:"+KCS_EMAIL+"?subject="+encodeURIComponent("Catering enquiry - "+service)+"&body="+encodeURIComponent("Name: "+name+"\nPhone: "+phone+"\nService: "+service+"\nRequirement: "+message);});
 </script>
+
+<script>
+(() => {
+  const carousel = document.getElementById('serviceCarousel');
+  if (!carousel) return;
+  const track = carousel.querySelector('.service-track');
+  const cards = Array.from(track.querySelectorAll('.service-card'));
+  const progress = document.getElementById('serviceProgress');
+  let index = 0;
+  let timer;
+  const step = () => cards[0].getBoundingClientRect().width + parseFloat(getComputedStyle(track).gap || 0);
+  const go = (next) => {
+    index = (next + cards.length) % cards.length;
+    carousel.scrollTo({left: index * step(), behavior: 'smooth'});
+    if (progress) progress.style.transform = `translateX(${index * 100}%)`;
+  };
+  document.getElementById('servicesPrev')?.addEventListener('click', () => { go(index - 1); restart(); });
+  document.getElementById('servicesNext')?.addEventListener('click', () => { go(index + 1); restart(); });
+  const restart = () => { clearInterval(timer); timer = setInterval(() => go(index + 1), 6000); };
+  carousel.addEventListener('scroll', () => {
+    const next = Math.round(carousel.scrollLeft / step());
+    if (next >= 0 && next < cards.length && next !== index) {
+      index = next;
+      if (progress) progress.style.transform = `translateX(${index * 100}%)`;
+    }
+  }, {passive:true});
+  carousel.addEventListener('mouseenter', () => clearInterval(timer));
+  carousel.addEventListener('mouseleave', restart);
+  carousel.addEventListener('focusin', () => clearInterval(timer));
+  carousel.addEventListener('focusout', restart);
+  window.addEventListener('resize', () => carousel.scrollTo({left:index * step(), behavior:'auto'}));
+  restart();
+})();
+</script>
+
 </body>
 </html>
