@@ -9,7 +9,7 @@
 <style>
 :root{--green:#073b2a;--green2:#0b4a35;--gold:#c8a45d;--gold2:#edbd59;--ivory:#f6f1e5;--paper:#fbf9f3;--ink:#18231c;--muted:#6c706a;--line:#e5dece;--shadow:0 5px 18px rgba(19,38,27,.06)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;background:var(--ivory);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.5}img{display:block;max-width:100%}a{color:inherit}.wrap{width:min(1240px,calc(100% - 48px));margin:auto}
-header{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.97);border-bottom:1px solid rgba(7,59,42,.12);backdrop-filter:blur(10px)}.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{text-decoration:none;min-width:180px;text-align:center}.brand-mark{display:block;font:34px/.8 Georgia,serif;letter-spacing:5px}.brand-sub{display:block;margin-top:6px;font-size:8px;letter-spacing:2px}.navlinks{display:flex;gap:clamp(12px,1.8vw,24px);align-items:center}.navlinks a{text-decoration:none;font-size:12px;white-space:nowrap}.navlinks a:hover{color:#98742f}.navright{display:flex;align-items:center;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 19px;border-radius:5px;text-decoration:none;font-size:13px;font-weight:700;border:1px solid transparent;cursor:pointer;transition:background .2s ease,transform .2s ease}.btn:hover{transform:translateY(-1px)}.btn-gold{background:var(--gold2);color:#1b1a14}.btn-green{background:var(--green);color:#fff}.btn-outline{background:transparent;border-color:var(--gold);color:#fff}.callus{font-size:11px;text-decoration:none;line-height:1.25}.hamb{display:none;background:transparent;border:1px solid var(--line);border-radius:5px;padding:7px 10px;font-size:20px}
+header{position:sticky;top:0;z-index:20;background:#050706;border-bottom:1px solid rgba(200,164,93,.35);backdrop-filter:blur(10px);color:#fff}.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{text-decoration:none;display:flex;align-items:center;justify-content:flex-start;min-width:230px;width:280px;flex:0 0 280px}.brand img{display:block;width:100%;height:72px;object-fit:contain;object-position:left center}.navlinks a{color:#fff}.navlinks a[href="#gallery"]{color:#edbd59}.navlinks{display:flex;gap:clamp(12px,1.8vw,24px);align-items:center;flex:1;justify-content:center}.navlinks a{text-decoration:none;font-size:12px;white-space:nowrap}.navlinks a:hover{color:#98742f}.navright{display:flex;align-items:center;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 19px;border-radius:5px;text-decoration:none;font-size:13px;font-weight:700;border:1px solid transparent;cursor:pointer;transition:background .2s ease,transform .2s ease}.btn:hover{transform:translateY(-1px)}.btn-gold{background:var(--gold2);color:#1b1a14}.btn-green{background:var(--green);color:#fff}.btn-outline{background:transparent;border-color:var(--gold);color:#fff}.callus{font-size:11px;text-decoration:none;line-height:1.25}.hamb{display:none;background:transparent;border:1px solid #78663e;color:#fff;border-radius:5px;padding:7px 10px;font-size:20px}
 .hero{position:relative;isolation:isolate;min-height:390px;overflow:hidden;background:#eae0c9}.hero::before{content:"";position:absolute;inset:0;z-index:-2;background-image:url('images/01-hero-vegetarian-thali-background.jpg');background-size:cover;background-position:center right}.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(249,245,233,.98) 0%,rgba(249,245,233,.91) 36%,rgba(249,245,233,.25) 58%,rgba(249,245,233,0) 100%)}.hero-inner{min-height:390px;display:flex;align-items:center;padding:42px 0}.hero-copy{max-width:570px}.eyebrow{font-size:11px;letter-spacing:2.3px;text-transform:uppercase;font-weight:800;color:var(--green2)}h1,h2,h3,p{margin-top:0}h1{font:700 clamp(42px,5.4vw,68px)/.98 Georgia,'Times New Roman',serif;letter-spacing:-1.5px;color:var(--green);margin:12px 0}.hero-lead{font-size:18px;line-height:1.45;margin-bottom:20px}.stats{display:flex;gap:20px;flex-wrap:wrap;margin:24px 0}.stat{display:flex;align-items:center;gap:8px}.staticon{font-size:25px;color:#9d792e}.stat strong{display:block;font-size:14px}.stat small{display:block;font-size:10px;color:#555}.hero-buttons{display:flex;gap:10px;flex-wrap:wrap}.hero-buttons .btn-green{border-radius:30px}
 .services{padding:18px 0 22px;background:#f8f4ea}.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.service-card{overflow:hidden;background:var(--paper);border:1px solid var(--line);border-radius:6px;box-shadow:var(--shadow)}.service-card img{width:100%;height:145px;object-fit:cover}.service-body{padding:13px 15px 15px}.service-icon{display:grid;place-items:center;width:43px;height:43px;margin-top:-34px;position:relative;background:#f8edce;border:2px solid var(--paper);border-radius:50%;font-size:21px}.service-body h3{font-size:15px;margin:6px 0 5px}.service-body p{font-size:12px;line-height:1.45;color:var(--muted);min-height:50px;margin-bottom:9px}.learn{font-size:12px;font-weight:700;color:var(--green);text-decoration:none}.learn span{color:#aa7e2b;padding-left:7px}
 .trust-strip{background:#f8f4ea;border-block:1px solid #e9e0ce;padding:17px 0}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}.trust-item{display:flex;justify-content:center;align-items:center;gap:10px;padding:5px 12px;border-right:1px solid #dfd5c1}.trust-item:last-child{border:0}.trust-icon{font-size:27px;color:var(--green)}.trust-item strong{display:block;font-size:14px}.trust-item small{display:block;font-size:10px}
@@ -19,8 +19,13 @@ header{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.97);border-
 .gallery{padding:34px 0 38px;background:var(--green);color:white;position:relative;overflow:hidden}.gallery:before,.gallery:after{content:"❧";position:absolute;color:rgba(187,207,132,.11);font-size:145px;top:-12px}.gallery:before{left:-8px}.gallery:after{right:-8px;transform:scaleX(-1)}.gallery-head{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:17px}.gallery-head h2{font:700 clamp(27px,3vw,36px) Georgia,serif;color:#ead39b;margin:0}.gallery-head p{font-size:12px;color:#e2ece5;margin:3px 0 0}.gallery-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:12px;align-items:stretch}.gallery-feature{position:relative;min-height:255px;overflow:hidden;border:2px solid var(--gold);border-radius:7px;background:#143d2d}.gallery-feature img{width:100%;height:100%;min-height:255px;object-fit:cover}.gallery-label{position:absolute;left:0;right:0;bottom:0;padding:13px 15px;background:linear-gradient(transparent,rgba(0,0,0,.82));color:white}.gallery-label strong{display:block;font:700 20px Georgia,serif}.gallery-label span{font-size:11px}.gallery-small{display:grid;grid-template-rows:1fr 1fr;gap:12px}.gallery-small img{width:100%;height:121px;object-fit:cover;border-radius:6px;border:1px solid rgba(255,255,255,.3)}
 .contact{padding:43px 0;background:#f8f4ea}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:start}.contact h2{font:700 33px/1.1 Georgia,serif;color:var(--green);margin:6px 0 10px}.contact p{font-size:13px;color:var(--muted)}.contact-details{display:flex;gap:18px;flex-wrap:wrap;font-size:12px}.contact-form{display:grid;gap:10px}.contact-form input,.contact-form textarea,.contact-form select{width:100%;padding:12px;border:1px solid #d9d1c0;border-radius:5px;background:#fffdf8;font:inherit}.contact-form textarea{min-height:85px;resize:vertical}.note{font-size:10px!important;color:#777!important}footer{background:#052c20;color:#dbe6dd;padding:18px 0;font-size:11px}.footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.footer a{color:white}
 @media(max-width:1000px){.nav{gap:12px}.navlinks{gap:11px}.navlinks a{font-size:11px}.callus{display:none}.hero-copy{max-width:52%}.service-card img{height:125px}}
-@media(max-width:760px){.wrap{width:calc(100% - 28px)}.nav{min-height:62px}.brand{min-width:120px}.brand-mark{font-size:27px}.brand-sub{font-size:6px;letter-spacing:1.5px}.hamb{display:block}.navlinks{display:none;position:absolute;left:0;right:0;top:62px;background:var(--paper);padding:16px 22px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.navright .btn{padding:9px 11px;font-size:11px}.hero,.hero-inner{min-height:490px}.hero::before{background-position:64% center}.hero::after{background:linear-gradient(90deg,rgba(249,245,233,.98),rgba(249,245,233,.89) 54%,rgba(249,245,233,.32))}.hero-inner{padding:36px 0;align-items:flex-start}.hero-copy{max-width:100%;padding-top:10px}.hero h1{font-size:clamp(40px,11vw,57px)}.hero-lead{max-width:340px}.stats{gap:12px 18px}.stat{min-width:calc(50% - 10px)}.service-grid{grid-template-columns:repeat(2,1fr);gap:10px}.service-card img{height:125px}.service-body{padding:11px}.service-body p{min-height:0}.trust-grid{grid-template-columns:repeat(2,1fr);row-gap:12px}.trust-item:nth-child(2){border-right:0}.band h2{letter-spacing:1.5px}.industrial-grid{grid-template-columns:1fr}.industrial-card>img{height:160px}.project-grid{grid-template-columns:repeat(2,1fr)}.about-grid,.contact-grid{grid-template-columns:1fr;gap:22px}.about-photo{height:230px}.gallery-head{align-items:flex-start;flex-direction:column}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-feature{grid-column:1/-1;min-height:270px}.gallery-feature img{min-height:270px}.gallery-small{grid-column:1/-1;grid-template-columns:1fr 1fr;grid-template-rows:auto}.gallery-small img{height:115px}}
+@media(max-width:760px){.wrap{width:calc(100% - 28px)}.nav{min-height:62px}.brand{min-width:145px;width:160px}.brand img{height:55px}.hamb{display:block}.navlinks{display:none;position:absolute;left:0;right:0;top:62px;background:var(--paper);padding:16px 22px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.navright .btn{padding:9px 11px;font-size:11px}.hero,.hero-inner{min-height:490px}.hero::before{background-position:64% center}.hero::after{background:linear-gradient(90deg,rgba(249,245,233,.98),rgba(249,245,233,.89) 54%,rgba(249,245,233,.32))}.hero-inner{padding:36px 0;align-items:flex-start}.hero-copy{max-width:100%;padding-top:10px}.hero h1{font-size:clamp(40px,11vw,57px)}.hero-lead{max-width:340px}.stats{gap:12px 18px}.stat{min-width:calc(50% - 10px)}.service-grid{grid-template-columns:repeat(2,1fr);gap:10px}.service-card img{height:125px}.service-body{padding:11px}.service-body p{min-height:0}.trust-grid{grid-template-columns:repeat(2,1fr);row-gap:12px}.trust-item:nth-child(2){border-right:0}.band h2{letter-spacing:1.5px}.industrial-grid{grid-template-columns:1fr}.industrial-card>img{height:160px}.project-grid{grid-template-columns:repeat(2,1fr)}.about-grid,.contact-grid{grid-template-columns:1fr;gap:22px}.about-photo{height:230px}.gallery-head{align-items:flex-start;flex-direction:column}.gallery-grid{grid-template-columns:1fr 1fr}.gallery-feature{grid-column:1/-1;min-height:270px}.gallery-feature img{min-height:270px}.gallery-small{grid-column:1/-1;grid-template-columns:1fr 1fr;grid-template-rows:auto}.gallery-small img{height:115px}}
 @media(max-width:430px){.navright .btn span{display:none}.hero{min-height:520px}.hero-inner{min-height:520px}.service-grid{grid-template-columns:1fr}.service-card img{height:180px}.service-body p{min-height:0}.panel{padding:13px}.panelhead h2{font-size:21px}.project-grid{gap:8px}.project-card{padding:10px 5px}.project-logo{font-size:15px}.gallery-small img{height:95px}}
+
+/* Header logo and horizontal training gallery */
+.navlinks a:hover{color:#edbd59}.navlinks.open{background:#050706}.training-carousel-wrap{position:relative;padding:0 38px}.training-carousel{overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}.training-carousel::-webkit-scrollbar{display:none}.training-grid{display:flex;gap:18px;grid-template-columns:none}.training-card{flex:0 0 calc((100% - 36px)/3);scroll-snap-align:start;min-width:260px}.training-card>img{height:240px}.training-arrow{position:absolute;z-index:3;top:42%;transform:translateY(-50%);width:48px;height:48px;border:0;border-radius:50%;background:#073b2a;color:white;font-size:34px;line-height:1;box-shadow:0 5px 16px rgba(0,0,0,.22);cursor:pointer}.training-arrow:hover{background:#c8a45d;color:#073b2a}.training-prev{left:0}.training-next{right:0}.training-dots{display:flex;justify-content:center;gap:10px;margin-top:20px}.training-dots button{width:12px;height:12px;padding:0;border:0;border-radius:50%;background:#d3d0c7;cursor:pointer}.training-dots button.active{background:#c8a45d}
+@media(max-width:760px){.training-carousel-wrap{padding:0 25px}.training-card{flex:0 0 88%;min-width:0}.training-card>img{height:230px}.training-arrow{width:40px;height:40px;font-size:29px}.navlinks a{color:#fff}}
+
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 
 /* Approved Style 4 hero: use the provided banner image exactly as supplied. */
@@ -29,7 +34,7 @@ header{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.97);border-
 
 
 /* Larger, one-at-a-time service carousel */
-.service-carousel-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:22px}
+.service-carousel-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:22px}.service-carousel-wrap{position:relative;padding:0 58px}.service-carousel{overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:3px 1px 16px}.service-carousel::-webkit-scrollbar{display:none}.service-carousel-wrap .carousel-controls{display:contents}.service-carousel-wrap .carousel-arrow{position:absolute;z-index:3;top:50%;transform:translateY(-50%);box-shadow:0 5px 16px rgba(0,0,0,.12)}.service-carousel-wrap #servicesPrev{left:0}.service-carousel-wrap #servicesNext{right:0}.service-carousel-wrap{position:relative;padding:0 58px}.service-carousel{overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:3px 1px 16px}.service-carousel::-webkit-scrollbar{display:none}.service-carousel-wrap .carousel-controls{display:contents}.service-carousel-wrap .carousel-arrow{position:absolute;z-index:3;top:50%;transform:translateY(-50%);box-shadow:0 5px 16px rgba(0,0,0,.12)}.service-carousel-wrap #servicesPrev{left:0}.service-carousel-wrap #servicesNext{right:0}
 .service-carousel-heading h2{font-family:var(--serif);font-size:clamp(30px,3vw,42px);margin:4px 0 8px;color:var(--ink)}
 .service-carousel-heading p{margin:0;color:var(--muted)}
 .carousel-controls{display:flex;gap:10px;flex-shrink:0}
@@ -56,7 +61,7 @@ header{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.97);border-
 .training-caption h3{margin:0 0 5px;font-size:20px;color:var(--ink)}
 .training-caption p{margin:0;color:var(--muted);line-height:1.55}
 @media(max-width:700px){
- .service-carousel-heading{align-items:center}
+ .service-carousel-wrap{padding:0 28px}.service-carousel-wrap .carousel-arrow{width:38px;height:38px;font-size:21px}.service-carousel-heading{align-items:center}
  .service-card{flex-basis:88%;max-width:88%}
  .service-card>img{height:230px}
  .service-body{padding:20px}
@@ -66,14 +71,41 @@ header{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.97);border-
  .carousel-arrow{width:42px;height:42px}
 }
 
+
+/* Final responsive carousel and image-fit corrections */
+.about-grid{grid-template-columns:1fr!important}
+.about-photo{display:none!important}
+.gallery-feature{min-height:0;height:auto;background:#073b2a;border-width:0;border-radius:0;overflow:hidden;display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+.gallery-feature img{width:100%;height:auto;max-height:none;min-height:0;object-fit:contain;object-position:center;border-radius:0;background:#073b2a}
+.training-carousel-wrap{padding:0 42px}
+.training-carousel{width:100%;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+.training-grid{display:flex!important;gap:18px;grid-template-columns:none!important;width:max-content;min-width:100%}
+.training-card{display:flex;flex-direction:column;flex:0 0 clamp(260px,31vw,360px);min-width:0;scroll-snap-align:start}
+.training-card>img{width:100%;height:230px;object-fit:cover;flex-shrink:0}
+.training-caption{flex:1;background:#fffdf8}
+.training-arrow{top:115px}
+.training-arrow:disabled,.site-arrow:disabled{opacity:.35;cursor:default}
+.training-dots button.active{background:#edbd59}
+.industrial-heading{display:flex;align-items:center;gap:14px}
+.site-carousel-controls{display:none!important}
+.site-arrow{width:40px;height:40px;border-radius:50%;border:1px solid #c9b987;background:#fffdf8;color:#073b2a;font-size:28px;line-height:1;cursor:pointer}
+.site-arrow:hover{background:#073b2a;color:#fff}
+.site-carousel{overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:4px 1px 14px}
+.site-carousel::-webkit-scrollbar{display:none}
+.site-track{display:flex;gap:18px;width:max-content;min-width:100%}
+.site-track .industrial-card{flex:0 0 clamp(260px,32vw,390px);min-width:0;scroll-snap-align:start;overflow:hidden;border-radius:9px}
+.site-track .industrial-card>img{width:100%;height:210px;object-fit:cover;display:block}
+.site-track .industrial-info{min-height:74px}
+@media(max-width:760px){.training-carousel-wrap{padding:0 28px}.training-card{flex-basis:84vw}.training-card>img{height:220px}.training-arrow{top:110px;width:38px;height:38px}.gallery-feature img{width:100%;height:auto}.site-track .industrial-card{flex-basis:78vw}.site-track .industrial-card>img{height:180px}.industrial-heading{flex-wrap:wrap}.site-carousel-controls{margin-left:auto}}
+
 </style>
 </head>
 <body>
 <header><div class="wrap nav">
-<a class="brand" href="#home" aria-label="Krishna Catering Services home"><span class="brand-mark">K C S</span><span class="brand-sub">KRISHNA CATERING SERVICE</span></a>
+<a class="brand" href="#home" aria-label="Krishna Catering Services home"><img src="images/kcs-logo-header.png" alt="KCS Krishna Catering Services logo"></a>
 <button class="hamb" id="hamb" aria-label="Open navigation" aria-expanded="false">☰</button>
 <nav class="navlinks" id="navlinks"><a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Our Services</a><a href="#canteens">Canteens We Serve</a><a href="#gallery">Gallery</a><a href="#clients">Clients</a><a href="#contact">Contact</a></nav>
-<div class="navright"><a class="btn btn-green" href="#contact">◉ <span>Get a Quote</span></a><a class="callus" href="#contact">☎ &nbsp;Call Us<br><strong>(Your Number)</strong></a></div>
+<div class="navright"><a class="btn btn-green" href="#contact">◉ <span>Get a Quote</span></a><a class="callus" href="tel:+918500788880">☎ &nbsp;Call Us<br><strong>+91 8500788880</strong></a></div>
 </div></header>
 <main>
 <section class="hero-banner" id="home" aria-label="Krishna Catering Services — approved Style 4 banner">
@@ -84,14 +116,16 @@ header{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.97);border-
   <div class="wrap">
     <div class="service-carousel-heading">
       <div><div class="eyebrow">What We Do</div><h2>Our Catering Services</h2><p>Move through our services one by one.</p></div>
-      <div class="carousel-controls"><button class="carousel-arrow" type="button" id="servicesPrev" aria-label="Previous service">←</button><button class="carousel-arrow" type="button" id="servicesNext" aria-label="Next service">→</button></div>
     </div>
-    <div class="service-carousel" id="serviceCarousel" aria-label="Catering services carousel">
-      <div class="service-track">
+    <div class="service-carousel-wrap">
+      <div class="carousel-controls"><button class="carousel-arrow" type="button" id="servicesPrev" aria-label="Previous service">←</button><button class="carousel-arrow" type="button" id="servicesNext" aria-label="Next service">→</button></div>
+      <div class="service-carousel" id="serviceCarousel" aria-label="Catering services carousel">
+        <div class="service-track">
         <article class="service-card"><img src="images/02-industrial-canteen-dining-room.jpg" alt="Original industrial canteen dining room"><div class="service-body"><div class="service-icon">▦</div><h3>Industrial Canteens</h3><p>Nutritious vegetarian meals for factories and industrial workforces.</p><a class="learn" href="#industrial">Learn More <span>→</span></a></div></article>
         <article class="service-card"><img src="images/03-guest-house-canteen.jpg" alt="Original guest-house canteen photograph"><div class="service-body"><div class="service-icon">⌂</div><h3>Guest House Catering</h3><p>Homestyle vegetarian meals for guests, visitors and teams.</p><a class="learn" href="#about">Learn More <span>→</span></a></div></article>
         <article class="service-card"><img src="images/05-project-canteen.jpeg" alt="Krishna Catering Services project canteen, original photograph supplied by the business"><div class="service-body"><div class="service-icon">♧</div><h3>Project Canteens</h3><p>Vegetarian meal services for project sites and construction teams.</p><a class="learn" href="#projects">Learn More <span>→</span></a></div></article>
-        <article class="service-card"><img src="images/05-hygiene-food-preparation.jpg" alt="Original food preparation photograph"><div class="service-body"><div class="service-icon">✓</div><h3>Hygiene &amp; Food Safety</h3><p>Hygiene-focused food handling, preparation and staff practices.</p><a class="learn" href="#gallery">Learn More <span>→</span></a></div></article>
+        </div>
+        </div>
       </div>
     </div>
     <div class="carousel-progress" aria-hidden="true"><span id="serviceProgress"></span></div>
@@ -103,11 +137,11 @@ header{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.97);border-
 <section class="band" id="canteens"><div class="wrap"><h2>Canteens We Serve</h2><p>Customised vegetarian catering for industrial locations and project sites, with a focus on quality, hygiene and dependable service.</p></div></section>
 
 <section class="clients" id="clients"><div class="wrap">
-<section class="panel" id="industrial"><div class="panelhead"><span class="panelicon">▦</span><div><h2>Industrial Canteens</h2><p>UltraTech Cement locations served</p></div></div><div class="industrial-grid">
-<article class="industrial-card"><img src="images/09-industrial-plant-apcw-illustrative.jpg" alt="Illustrative cement plant image, replace with an approved APCW photo"><div class="industrial-info"><div class="ultra-logo">UltraTech<br>CEMENT</div><div><strong>UltraTech Cements<br>(APCW)</strong><small>Andhra Pradesh</small></div></div></article>
-<article class="industrial-card"><img src="images/10-industrial-plant-petnikota-illustrative.jpg" alt="Illustrative cement plant image, replace with an approved Petnikota photo"><div class="industrial-info"><div class="ultra-logo">UltraTech<br>CEMENT</div><div><strong>UltraTech Cements<br>Petnikota</strong><small>Andhra Pradesh</small></div></div></article>
-<article class="industrial-card"><img src="images/11-industrial-plant-arakonam-illustrative.jpg" alt="Illustrative cement plant image, replace with an approved Arakonam photo"><div class="industrial-info"><div class="ultra-logo">UltraTech<br>CEMENT</div><div><strong>UltraTech Cements<br>Arakonam</strong><small>Tamil Nadu</small></div></div></article>
-</div><p style="font-size:10px;color:#777;margin:10px 0 0">Plant photos are illustrative crops from the design mockup, not verified site photographs. Replace them with approved images before publication.</p></section>
+<section class="panel" id="industrial"><div class="panelhead industrial-heading"><span class="panelicon">▦</span><div><h2>Industrial Canteens</h2><p>UltraTech Cement locations served</p></div></div><div class="site-carousel" id="siteCarousel" aria-label="UltraTech project canteens"><div class="site-track">
+<article class="industrial-card"><img src="images/ultratech-apcw.jpg" alt="UltraTech cement plant at APCW"><div class="industrial-info"><div class="ultra-logo">UltraTech<br>CEMENT</div><div><strong>UltraTech Cement (APCW)</strong><small>Andhra Pradesh</small></div></div></article>
+<article class="industrial-card"><img src="images/ultratech-petnikota.jpg" alt="UltraTech cement plant at Petnikota"><div class="industrial-info"><div class="ultra-logo">UltraTech<br>CEMENT</div><div><strong>UltraTech Cement — Petnikota</strong><small>Andhra Pradesh</small></div></div></article>
+<article class="industrial-card"><img src="images/ultratech-arakonam.jpg" alt="UltraTech cement plant at Arakonam"><div class="industrial-info"><div class="ultra-logo">UltraTech<br>CEMENT</div><div><strong>UltraTech Cement — Arakonam</strong><small>Tamil Nadu</small></div></div></article>
+</div></div></section>
 <section class="panel" id="projects"><div class="panelhead"><span class="panelicon">♧</span><div><h2>Project Canteens</h2><p>Project canteen services for the following clients</p></div></div><div class="project-grid">
 <article class="project-card"><div class="project-logo ultra">UltraTech<br>CEMENT</div><strong>UltraTech Cement</strong><small>Project Canteens</small></article>
 <article class="project-card"><div class="project-logo shree">✦ Shree<br>Cement</div><strong>Shree Cement</strong><small>Project Canteens</small></article>
@@ -116,32 +150,39 @@ header{position:sticky;top:0;z-index:20;background:rgba(251,249,243,.97);border-
 </div></section>
 </div></section>
 
-<section class="about" id="about"><div class="wrap about-grid"><div><div class="eyebrow">About Krishna Catering Services</div><h2>Vegetarian meals. Dependable service. Every day.</h2><p>Krishna Catering Services provides vegetarian catering for industrial canteens, project canteens and guest houses. Our focus is on reliable meal service, food hygiene and supporting the people who keep workplaces running.</p><div class="feature-grid"><div class="feature">✓ &nbsp;40+ Years of Experience</div><div class="feature">✓ &nbsp;1000+ Meals Served Daily</div><div class="feature">✓ &nbsp;Vegetarian Catering</div><div class="feature">✓ &nbsp;Industrial & Project Sites</div></div><p style="font-size:11px;margin-top:12px">*Please confirm current FSSAI licence details and wording before publishing.</p></div><img class="about-photo" src="images/07-canteen-dining-room-training.jpg" alt="Original canteen dining-room photograph" loading="lazy"></div></section>
+<section class="about" id="about"><div class="wrap about-grid"><div><div class="eyebrow">About Krishna Catering Services</div><h2>Vegetarian meals. Dependable service. Every day.</h2><p>Krishna Catering Services provides vegetarian catering for industrial canteens, project canteens and guest houses. Our focus is on reliable meal service, food hygiene and supporting the people who keep workplaces running.</p><div class="feature-grid"><div class="feature">✓ &nbsp;40+ Years of Experience</div><div class="feature">✓ &nbsp;1000+ Meals Served Daily</div><div class="feature">✓ &nbsp;Vegetarian Catering</div><div class="feature">✓ &nbsp;Industrial & Project Sites</div></div><p style="font-size:11px;margin-top:12px">*Please confirm current FSSAI licence details and wording before publishing.</p></div></div></section>
 
 <section class="gallery" id="gallery">
   <div class="wrap">
-    <div class="gallery-head"><div><div class="eyebrow">Our Work in Practice</div><h2>Best Captured Moments</h2><p>Original photographs from our canteens, training activities and quality checks.</p></div><a class="btn btn-outline" href="#contact">Enquire About Our Services →</a></div>
-    <article class="gallery-feature"><img src="images/06-team-best-captured-moment.jpg" alt="Krishna Catering Services team photograph — best captured moment"><div class="gallery-label"><strong>Best Captured Moment</strong><span>Our team, our commitment to service.</span></div></article>
-    <div class="training-grid">
-      <article class="training-card"><img src="images/01-training-fire-safety.jpeg" alt="Original photograph of fire and safety training in the canteen"><div class="training-caption"><span>01</span><div><h3>Fire &amp; Safety Training</h3><p>Safety awareness and emergency preparedness.</p></div></div></article>
-      <article class="training-card"><img src="images/02-training-medical.jpeg" alt="Original photograph of medical training and health checks"><div class="training-caption"><span>02</span><div><h3>Medical Training</h3><p>Health awareness and safe work practices.</p></div></div></article>
-      <article class="training-card"><img src="images/03-training-electrical-appliances.jpeg" alt="Original photograph of staff training in the canteen"><div class="training-caption"><span>03</span><div><h3>Electrical Appliance Training</h3><p>Training focused on safe equipment use.</p></div></div></article>
-      <article class="training-card"><img src="images/04-random-canteen-audits.jpeg" alt="Original photograph of a canteen review and audit meeting"><div class="training-caption"><span>04</span><div><h3>Random Audits</h3><p>Routine reviews to support quality and standards.</p></div></div></article>
+    <div class="gallery-head"><div><div class="eyebrow">Our Work in Practice</div><h2>Gallery</h2><p>Hygiene, safety and staff training in practice.</p></div><a class="btn btn-outline" href="#contact">Enquire About Our Services →</a></div>
+    <article class="gallery-feature"><img src="images/06-team-best-captured-moment.jpg.png" alt="Krishna Catering Services team photograph"></article>
+    <div class="training-carousel-wrap">
+      <button class="training-arrow training-prev" type="button" aria-label="Scroll gallery left">‹</button>
+      <div class="training-carousel" id="trainingCarousel">
+        <div class="training-grid">
+          <article class="training-card"><img src="images/07-canteen-dining-room-training.jpg" alt="Food hygiene and preparation in the canteen"><div class="training-caption"><span>01</span><div><h3>Hygiene &amp; Food Safety</h3><p>Hygiene-focused food handling, preparation and staff practices.</p></div></div></article>
+          <article class="training-card"><img src="images/01-training-fire-safety.jpeg" alt="Fire and safety training in the canteen"><div class="training-caption"><span>02</span><div><h3>Fire &amp; Safety Training</h3><p>Safety awareness and emergency preparedness.</p></div></div></article>
+          <article class="training-card"><img src="images/02-training-medical.jpeg" alt="Medical training and health checks"><div class="training-caption"><span>03</span><div><h3>Medical Training</h3><p>Health awareness and safe work practices.</p></div></div></article>
+          <article class="training-card"><img src="images/03-training-electrical-appliances.jpeg" alt="Electrical appliance training"><div class="training-caption"><span>04</span><div><h3>Electrical Appliance Training</h3><p>Training focused on safe equipment use.</p></div></div></article>
+        </div>
+      </div>
+      <button class="training-arrow training-next" type="button" aria-label="Scroll gallery right">›</button>
     </div>
+    <div class="training-dots" id="trainingDots" aria-label="Gallery slide navigation"></div>
   </div>
 </section>
 
-<section class="contact" id="contact"><div class="wrap contact-grid"><div><div class="eyebrow">Get in Touch</div><h2>Let's discuss your vegetarian catering requirements.</h2><p>Contact Krishna Catering Services for industrial canteens, project canteens and guest-house catering.</p><div class="contact-details"><span>☎ Call Us: (Your Number)</span><span>◉ WhatsApp: (Your Number)</span><span>✉ Email: (Your Email)</span></div></div>
-<form class="contact-form" id="enquiryForm"><input id="visitorName" placeholder="Your name" autocomplete="name" required><input id="visitorPhone" placeholder="Phone number" autocomplete="tel" required><select id="visitorService" required><option value="">Select a service</option><option>Industrial Canteen</option><option>Project Canteen</option><option>Guest House Catering</option></select><textarea id="visitorMessage" placeholder="Tell us about your requirement"></textarea><button class="btn btn-gold" type="submit">Prepare Email Enquiry →</button><p class="note">The form opens the visitor's email app. Replace the placeholder email in the script before publishing.</p></form></div></section>
+<section class="contact" id="contact"><div class="wrap contact-grid"><div><div class="eyebrow">Get in Touch</div><h2>Let's discuss your vegetarian catering requirements.</h2><p>Contact Krishna Catering Services for industrial canteens, project canteens and guest-house catering.</p><div class="contact-details"><span>☎ Call Us: <a href="tel:+918500788880">+91 8500788880</a></span><span>◉ WhatsApp: <a href="https://wa.me/918500788880">+91 8500788880</a></span><span>✉ Email: <a href="mailto:kcs.apcw@gmail.com">kcs.apcw@gmail.com</a></span><span>✉ Alternate email: admin@krishnacateringservices</span></div></div>
+<form class="contact-form" id="enquiryForm"><input id="visitorName" placeholder="Your name" autocomplete="name" required><input id="visitorPhone" placeholder="Phone number" autocomplete="tel" required><select id="visitorService" required><option value="">Select a service</option><option>Industrial Canteen</option><option>Project Canteen</option><option>Guest House Catering</option></select><textarea id="visitorMessage" placeholder="Tell us about your requirement"></textarea><button class="btn btn-gold" type="submit">Prepare Email Enquiry →</button><p class="note">The form opens an email draft addressed to kcs.apcw@gmail.com.</p></form></div></section>
 </main>
 <footer><div class="wrap footer"><span>© <span id="year"></span> Krishna Catering Services</span><span>Pure Vegetarian Catering · Industrial Canteens · Project Canteens</span><a href="#home">Back to top ↑</a></div></footer>
 <script>
-const KCS_EMAIL="YOUR-EMAIL@example.com";
+const KCS_EMAIL="kcs.apcw@gmail.com";
 const hamb=document.getElementById("hamb"), nav=document.getElementById("navlinks");
 hamb.addEventListener("click",()=>{const open=nav.classList.toggle("open");hamb.setAttribute("aria-expanded",String(open));hamb.textContent=open?"×":"☰";});
 nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");hamb.setAttribute("aria-expanded","false");hamb.textContent="☰";}));
 document.getElementById("year").textContent=new Date().getFullYear();
-document.getElementById("enquiryForm").addEventListener("submit",e=>{e.preventDefault();if(KCS_EMAIL==="YOUR-EMAIL@example.com"){alert("Please replace YOUR-EMAIL@example.com in the KCS_EMAIL setting near the bottom of index.html with your real business email.");return;}const name=document.getElementById("visitorName").value.trim(),phone=document.getElementById("visitorPhone").value.trim(),service=document.getElementById("visitorService").value,message=document.getElementById("visitorMessage").value.trim();window.location.href="mailto:"+KCS_EMAIL+"?subject="+encodeURIComponent("Catering enquiry - "+service)+"&body="+encodeURIComponent("Name: "+name+"\nPhone: "+phone+"\nService: "+service+"\nRequirement: "+message);});
+document.getElementById("enquiryForm").addEventListener("submit",e=>{e.preventDefault();const name=document.getElementById("visitorName").value.trim(),phone=document.getElementById("visitorPhone").value.trim(),service=document.getElementById("visitorService").value,message=document.getElementById("visitorMessage").value.trim();window.location.href="mailto:"+KCS_EMAIL+"?subject="+encodeURIComponent("Catering enquiry - "+service)+"&body="+encodeURIComponent("Name: "+name+"\nPhone: "+phone+"\nService: "+service+"\nRequirement: "+message);});
 </script>
 
 <script>
@@ -175,6 +216,69 @@ document.getElementById("enquiryForm").addEventListener("submit",e=>{e.preventDe
   carousel.addEventListener('focusout', restart);
   window.addEventListener('resize', () => carousel.scrollTo({left:index * step(), behavior:'auto'}));
   restart();
+})();
+</script>
+
+
+<script>
+(() => {
+ const rail = document.getElementById('trainingCarousel');
+ const dots = document.getElementById('trainingDots');
+ const prev = document.querySelector('.training-prev');
+ const next = document.querySelector('.training-next');
+ if (!rail || !dots || !prev || !next) return;
+ const cards = Array.from(rail.querySelectorAll('.training-card'));
+ if (!cards.length) return;
+ const gap = () => parseFloat(getComputedStyle(rail.querySelector('.training-grid')).gap) || 0;
+ const step = () => cards[0].getBoundingClientRect().width + gap();
+ const maxIndex = () => Math.max(0, cards.length - Math.max(1, Math.floor((rail.clientWidth + gap()) / step())));
+ const current = () => Math.max(0, Math.min(maxIndex(), Math.round(rail.scrollLeft / step())));
+ const go = i => rail.scrollTo({ left: Math.max(0, Math.min(maxIndex(), i)) * step(), behavior: 'smooth' });
+ dots.innerHTML = '';
+ cards.forEach((card, i) => {
+   const dot = document.createElement('button');
+   dot.type = 'button';
+   dot.setAttribute('aria-label', 'Show gallery item ' + (i + 1));
+   dot.addEventListener('click', () => go(i));
+   dots.appendChild(dot);
+ });
+ const update = () => {
+   const i = current();
+   Array.from(dots.children).forEach((dot, j) => {
+     dot.classList.toggle('active', j === i);
+     dot.setAttribute('aria-current', j === i ? 'true' : 'false');
+   });
+   prev.disabled = i <= 0;
+   next.disabled = i >= maxIndex();
+ };
+ prev.addEventListener('click', () => go(current() - 1));
+ next.addEventListener('click', () => go(current() + 1));
+ rail.addEventListener('scroll', update, { passive: true });
+ window.addEventListener('resize', update);
+ update();
+})();
+</script>
+
+
+<script>
+(() => {
+ const rail = document.getElementById('siteCarousel');
+ const prev = document.getElementById('sitePrev');
+ const next = document.getElementById('siteNext');
+ if (!rail || !prev || !next) return;
+ const track = rail.querySelector('.site-track');
+ const cards = Array.from(track.querySelectorAll('.industrial-card'));
+ if (!cards.length) return;
+ const step = () => cards[0].getBoundingClientRect().width + (parseFloat(getComputedStyle(track).gap) || 0);
+ const max = () => Math.max(0, Math.ceil((rail.scrollWidth - rail.clientWidth - 2) / step()));
+ const current = () => Math.max(0, Math.min(max(), Math.round(rail.scrollLeft / step())));
+ const go = n => rail.scrollTo({left: Math.max(0, Math.min(max(), n)) * step(), behavior: 'smooth'});
+ prev.addEventListener('click', () => go(current() - 1));
+ next.addEventListener('click', () => go(current() + 1));
+ const update = () => { const i=current(); prev.disabled=i<=0; next.disabled=rail.scrollLeft >= rail.scrollWidth-rail.clientWidth-3; };
+ rail.addEventListener('scroll', update, {passive:true});
+ window.addEventListener('resize', update);
+ update();
 })();
 </script>
 
